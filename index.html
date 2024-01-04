@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dear Mine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="bgMusic.mp3" type="audio/mp3">
+</audio>
+
+<div class="bg_heart"></div>
+<div class="container">
+  <h2 id="text1"></h2>
+  <button id="playButton">Play Music</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    var audio = document.getElementById('bgMusic');
+    var playButton = document.getElementById('playButton');
+
+    playButton.addEventListener('click', function() {
+      audio.play();
+      playButton.style.display = 'none';
+    });
+  });
+
+</script>
+
+</body>
+</html>
